@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1218">
+  <title>DIGITAL AWARENESS | منصة الوعي الرقمي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" id="brandHome" aria-label="العودة للرئيسية">
+        <span class="brand-mark">DA</span>
+        <span><strong>DIGITAL AWARENESS</strong><small>وعيُك أمانك</small></span>
+      </a>
+      <div class="topbar-side">
+        <span class="live-dot"></span>
+        <span>تجربة توعوية تفاعلية</span>
+      </div>
+    </header>
+
+    <main id="appMain">
+      <section class="screen active" id="screen-home">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">مساحة للتعلّم والحوار</span>
+            <h1>خلّي وعيك<br><span>خطوتك الأولى للأمان</span></h1>
+            <p>تجربة تفاعلية تساعدنا نفهم العالم الرقمي، ونفكر قبل ما نشارك أو نضغط أو نصدّق.</p>
+            <button class="btn btn-primary btn-large" id="startBtn">ابدأ التجربة <span>←</span></button>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="shield"><span>✓</span></div>
+            <div class="float-card card-a">خصوصيتك مهمة</div>
+            <div class="float-card card-b">فكّر قبل ما تضغط</div>
+            <div class="spark spark-a"></div><div class="spark spark-b"></div>
+          </div>
+        </div>
+        <div class="home-bottom"><span>تعلّم • ناقش • قرّر</span><span>مساحة آمنة للأسئلة والتجربة</span></div>
+      </section>
+
+      <section class="screen" id="screen-age">
+        <div class="section-heading">
+          <span class="eyebrow">الخطوة الأولى</span>
+          <h2>مين أبطال جلستنا النهارده؟</h2>
+          <p>اختاري الفئة العمرية علشان نعرض أمثلة وطريقة شرح مناسبة لهم.</p>
+        </div>
+        <div class="choice-grid">
+          <button class="choice-card" data-age="primary">
+            <span class="choice-icon">✦</span><strong>طلاب المرحلة الابتدائية</strong>
+            <small>أمثلة بسيطة ومواقف قريبة من حياتهم</small><span class="choice-arrow">←</span>
+          </button>
+          <button class="choice-card" data-age="older">
+            <span class="choice-icon">◇</span><strong>طلاب الإعدادي والثانوي</strong>
+            <small>مواقف أعمق ونقاشات وتحديات</small><span class="choice-arrow">←</span>
+          </button>
+        </div>
+        <div class="screen-actions"><button class="btn btn-quiet" data-back="home">السابق</button></div>
+      </section>
+
+      <section class="screen" id="screen-topics">
+        <div class="section-heading">
+          <span class="eyebrow">اختاري موضوع الجلسة</span>
+          <h2 id="topicsWelcome">أهلًا بيكم في منصة الوعي الرقمي</h2>
+          <p>كل موضوع رحلة قصيرة فيها موقف ومناقشة وأسئلة وتحدي للفريق.</p>
+        </div>
+        <div class="topic-grid" id="topicGrid"></div>
+        <div class="screen-actions"><button class="btn btn-quiet" data-back="age">السابق</button></div>
+      </section>
+
+      <section class="screen" id="screen-topic-intro">
+        <div class="topic-intro-panel">
+          <span class="eyebrow" id="topicNumber">الموضوع الأول</span>
+          <div class="topic-symbol" id="topicSymbol">◎</div>
+          <h2 id="topicTitle"></h2>
+          <p id="topicIntro"></p>
+          <div class="goal-strip"><span>هدفنا النهارده</span><strong id="topicGoal"></strong></div>
+          <button class="btn btn-primary" id="beginTopicBtn">ابدأ الموضوع <span>←</span></button>
+        </div>
+        <div class="screen-actions"><button class="btn btn-quiet" data-back="topics">العودة للموضوعات</button></div>
+      </section>
+
+      <section class="screen content-screen" id="screen-story">
+        <div class="content-heading"><span class="eyebrow">١ / تمهيد</span><h2>خلّينا نبدأ بموقف</h2><p>اقرأوا الموقف مع بعض، وفكّروا: إيه اللي ممكن يحصل بعد كده؟</p></div>
+        <article class="story-card">
+          <div class="story-label">موقف من الحياة اليومية</div>
+          <h3 id="storyTitle"></h3>
+          <p id="storyText"></p>
+          <div class="story-question" id="storyPrompt"></div>
+        </article>
+        <div class="screen-actions split-actions"><button class="btn btn-quiet" data-back="topic-intro">السابق</button><button class="btn btn-primary" data-next="discussion">التالي <span>←</span></button></div>
+      </section>
+
+      <section class="screen content-screen" id="screen-discussion">
+        <div class="content-heading"><span class="eyebrow">٢ / نفكّر ونتناقش</span><h2>خلّينا نسمع آراءكم</h2><p>مفيش استعجال في الإجابة؛ اسمعوا بعض وناقشوا الأسباب.</p></div>
+        <div class="discussion-list" id="discussionList"></div>
+        <div class="discussion-note">خدي وقتك في النقاش، وبعد ما تخلصوا اضغطي «التالي».</div>
+        <div class="screen-actions split-actions"><button class="btn btn-quiet" data-back="story">السابق</button><button class="btn btn-primary" data-next="question">التالي <span>←</span></button></div>
+      </section>
+
+      <section class="screen content-screen" id="screen-question">
+        <div class="content-heading"><span class="eyebrow">٣ / اختبروا تفكيركم</span><h2>إيه القرار الأفضل؟</h2><p>هنجاوب على 6 أسئلة متنوعة. اختاروا الإجابة، وبعدها اضغطي تأكيد علشان تظهر النتيجة.</p></div>
+        <article class="question-card">
+          <div class="question-count">أسئلة تفاعلية <span id="questionCountLabel">السؤال 01 من 06</span></div>
+          <h3 id="questionText"></h3>
+          <div class="question-helper" id="questionHelper"></div>
+          <div class="answers" id="answers"></div>
+          <div class="answer-feedback" id="answerFeedback" aria-live="polite"></div>
+          <div class="question-controls">
+            <button class="btn btn-primary" id="confirmAnswerBtn" disabled>تأكيد الإجابة</button>
+            <button class="reveal-btn" id="revealAnswerBtn" title="إظهار الإجابة الصحيحة" aria-label="إظهار الإجابة الصحيحة">✓</button>
+          </div>
+        </article>
+        <div class="screen-actions split-actions"><button class="btn btn-quiet" data-back="discussion">السابق</button><button class="btn btn-primary" id="toChallengeBtn" disabled>التالي <span>←</span></button></div>
+      </section>
+
+      <section class="screen content-screen" id="screen-challenge">
+        <div class="content-heading"><span class="eyebrow">٤ / تحدي الفريق</span><h2>التحدي محتاج تفكير جماعي!</h2><p>قسّموا نفسكم لفِرق، وخدوا وقتكم في الوصول لقرار واحد.</p></div>
+        <article class="challenge-card">
+          <div class="challenge-badge">TEAM CHALLENGE</div>
+          <h3 id="challengeTitle"></h3>
+          <p id="challengeText"></p>
+          <div class="challenge-task" id="challengeTask"></div>
+          <button class="btn btn-outline" id="showHintBtn">إظهار تلميح</button>
+          <p class="hint-text hidden" id="challengeHint"></p>
+        </article>
+        <div class="screen-actions split-actions"><button class="btn btn-quiet" data-back="question">السابق</button><button class="btn btn-primary" data-next="closing">التالي <span>←</span></button></div>
+      </section>
+
+      <section class="screen content-screen" id="screen-closing">
+        <div class="closing-mark">✓</div>
+        <span class="eyebrow">وصلنا لنهاية الموضوع</span>
+        <h2>إيه أهم حاجة هنفتكرها؟</h2>
+        <div class="takeaway-box" id="takeaways"></div>
+        <p class="closing-phrase" id="closingPhrase"></p>
+        <div class="screen-actions closing-actions">
+          <button class="btn btn-quiet" data-back="challenge">السابق</button>
+          <button class="btn btn-outline" id="backToTopicsBtn">العودة للموضوعات</button>
+          <button class="btn btn-primary" id="endSessionBtn">إنهاء الجلسة</button>
+        </div>
+      </section>
+
+      <section class="screen content-screen" id="screen-individual">
+        <div class="content-heading"><span class="eyebrow">التحدي الفردي</span><h2>دلوقتي دور كل واحد</h2><p>فكّر بنفسك واختار التصرف اللي شايفه الأنسب.</p></div>
+        <article class="question-card">
+          <div class="question-count">تحدي ختامي</div>
+          <h3>قبل ما تشارك أي معلومة أو محتوى على الإنترنت، إيه أول حاجة تعملها؟</h3>
+          <div class="answers" id="individualAnswers">
+            <button class="answer-option" data-correct="false">أشارك بسرعة قبل ما الفرصة تضيع</button>
+            <button class="answer-option" data-correct="true">أتأكد من المحتوى ومين هيشوفه</button>
+            <button class="answer-option" data-correct="false">أعتمد على إن غيري شاركه</button>
+          </div>
+          <div class="answer-feedback" id="individualFeedback" aria-live="polite"></div>
+        </article>
+        <div class="screen-actions split-actions"><button class="btn btn-quiet" data-back="closing">السابق</button><button class="btn btn-primary" id="finishBtn">إنهاء التجربة</button></div>
+      </section>
+
+      <section class="screen" id="screen-finish">
+        <div class="finish-panel"><div class="closing-mark">✦</div><span class="eyebrow">شكرًا لمشاركتكم</span><h2>وعيُك أمانك</h2><p>كل قرار واعي في العالم الرقمي بيفرق. خليك دايمًا بتفكّر قبل ما تضغط أو تشارك.</p><button class="btn btn-primary" id="restartBtn">العودة للبداية</button></div>
+      </section>
+    </main>
+
+    <footer class="footer"><span>© جميع الحقوق محفوظة – منصة الوعي الرقمي</span><span>وعيُك أمانك</span></footer>
+  </div>
+  <div class="celebration hidden" id="celebration" aria-hidden="true">✦　✓　✦</div>
+  <audio id="successAudio" src="assets/success.wav" preload="auto"></audio>
+  <audio id="wrongAudio" src="assets/wrong.wav" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
