@@ -44,16 +44,16 @@
         <div class="section-heading">
           <span class="eyebrow">الخطوة الأولى</span>
           <h2>مين أبطال جلستنا النهارده؟</h2>
-          <p>اختاري الفئة العمرية علشان نعرض أمثلة وطريقة شرح مناسبة لهم.</p>
+          <p>اختاري الفئة العمرية علشان نعرض مواقف وشرحًا مناسبًا لهم.</p>
         </div>
         <div class="choice-grid">
           <button class="choice-card" data-age="primary">
-            <span class="choice-icon">✦</span><strong>طلاب المرحلة الابتدائية</strong>
-            <small>أمثلة بسيطة ومواقف قريبة من حياتهم</small><span class="choice-arrow">←</span>
+            <span class="choice-icon">✦</span><strong>من 6 إلى 11 سنة</strong>
+            <small>مواقف وأمثلة وشرح مناسب للأطفال</small><span class="choice-arrow">←</span>
           </button>
           <button class="choice-card" data-age="older">
-            <span class="choice-icon">◇</span><strong>طلاب الإعدادي والثانوي</strong>
-            <small>مواقف أعمق ونقاشات وتحديات</small><span class="choice-arrow">←</span>
+            <span class="choice-icon">◇</span><strong>من 12 إلى 18 سنة</strong>
+            <small>مواقف واقعية ونقاشات تناسب الفئة الأكبر</small><span class="choice-arrow">←</span>
           </button>
         </div>
         <div class="screen-actions"><button class="btn btn-quiet" data-back="home">السابق</button></div>
@@ -76,13 +76,14 @@
           <h2 id="topicTitle"></h2>
           <p id="topicIntro"></p>
           <div class="goal-strip"><span>هدفنا النهارده</span><strong id="topicGoal"></strong></div>
+          <div class="topic-objectives" id="topicObjectives"></div>
           <button class="btn btn-primary" id="beginTopicBtn">ابدأ الموضوع <span>←</span></button>
         </div>
         <div class="screen-actions"><button class="btn btn-quiet" data-back="topics">العودة للموضوعات</button></div>
       </section>
 
       <section class="screen content-screen" id="screen-story">
-        <div class="content-heading"><span class="eyebrow">١ / تمهيد</span><h2>خلّينا نبدأ بموقف</h2><p>اقرأوا الموقف مع بعض، وفكّروا: إيه اللي ممكن يحصل بعد كده؟</p></div>
+        <div class="content-heading"><span class="eyebrow">١ / تمهيد</span><h2>خلّينا نبدأ بموقف</h2><p>اقرأوا الموقف معًا، ثم افتحي تحليل الموقف والتصرف الصحيح بعد سماع المشاركات.</p></div>
         <article class="story-card">
           <div class="story-label">موقف من الحياة اليومية</div>
           <h3 id="storyTitle"></h3>
@@ -93,14 +94,14 @@
       </section>
 
       <section class="screen content-screen" id="screen-discussion">
-        <div class="content-heading"><span class="eyebrow">٢ / نفكّر ونتناقش</span><h2>خلّينا نسمع آراءكم</h2><p>مفيش استعجال في الإجابة؛ اسمعوا بعض وناقشوا الأسباب.</p></div>
+        <div class="content-heading"><span class="eyebrow">٢ / نفكّر ونتناقش</span><h2>خلّينا نسمع آراءكم</h2><p>اسمعوا الآراء أولًا، ثم افتحي الإجابة والتفسير والشرح والمثال من زر الشرح.</p></div>
         <div class="discussion-list" id="discussionList"></div>
         <div class="discussion-note">خدي وقتك في النقاش، وبعد ما تخلصوا اضغطي «التالي».</div>
         <div class="screen-actions split-actions"><button class="btn btn-quiet" data-back="story">السابق</button><button class="btn btn-primary" data-next="question">التالي <span>←</span></button></div>
       </section>
 
       <section class="screen content-screen" id="screen-question">
-        <div class="content-heading"><span class="eyebrow">٣ / اختبروا تفكيركم</span><h2>إيه القرار الأفضل؟</h2><p>هنجاوب على 6 أسئلة متنوعة. اختاروا الإجابة، وبعدها اضغطي تأكيد علشان تظهر النتيجة.</p></div>
+        <div class="content-heading"><span class="eyebrow">٣ / اختبروا تفكيركم</span><h2>إيه القرار الأفضل؟</h2><p>هنجاوب على 6 أسئلة متنوعة. بعد اختيار الإجابة، اضغطي تأكيد لمراجعة النتيجة والتفسير.</p></div>
         <article class="question-card">
           <div class="question-count">أسئلة تفاعلية <span id="questionCountLabel">السؤال 01 من 06</span></div>
           <h3 id="questionText"></h3>
@@ -116,14 +117,19 @@
       </section>
 
       <section class="screen content-screen" id="screen-challenge">
-        <div class="content-heading"><span class="eyebrow">٤ / تحدي الفريق</span><h2>التحدي محتاج تفكير جماعي!</h2><p>قسّموا نفسكم لفِرق، وخدوا وقتكم في الوصول لقرار واحد.</p></div>
+        <div class="content-heading"><span class="eyebrow">٤ / تحدي الفريق</span><h2>التحدي محتاج تفكير جماعي!</h2><p>قسّموا نفسكم لفِرق، وناقشوا المطلوب واتفقوا على قرار من غير عرض حل جاهز.</p></div>
         <article class="challenge-card">
           <div class="challenge-badge">TEAM CHALLENGE</div>
           <h3 id="challengeTitle"></h3>
           <p id="challengeText"></p>
           <div class="challenge-task" id="challengeTask"></div>
-          <button class="btn btn-outline" id="showHintBtn">إظهار تلميح</button>
-          <p class="hint-text hidden" id="challengeHint"></p>
+          <section class="challenge-materials-panel" aria-label="بطاقات التحدي">
+            <h4 id="challengeMaterialsTitle">بطاقات العمل</h4>
+            <p class="challenge-materials-hint">استخدموا البطاقات التالية في تنفيذ التحدي، واكتبوا تصنيفكم أو قراراتكم على ورقة الفريق.</p>
+            <div class="challenge-materials-grid" id="challengeMaterials"></div>
+            <div class="challenge-categories"><strong>طريقة العمل</strong><p id="challengeCategories"></p></div>
+            <div class="challenge-output"><strong>المطلوب تسليمه</strong><p id="challengeOutput"></p></div>
+          </section>
         </article>
         <div class="screen-actions split-actions"><button class="btn btn-quiet" data-back="question">السابق</button><button class="btn btn-primary" data-next="closing">التالي <span>←</span></button></div>
       </section>
@@ -145,12 +151,9 @@
         <div class="content-heading"><span class="eyebrow">التحدي الفردي</span><h2>دلوقتي دور كل واحد</h2><p>فكّر بنفسك واختار التصرف اللي شايفه الأنسب.</p></div>
         <article class="question-card">
           <div class="question-count">تحدي ختامي</div>
-          <h3>قبل ما تشارك أي معلومة أو محتوى على الإنترنت، إيه أول حاجة تعملها؟</h3>
-          <div class="answers" id="individualAnswers">
-            <button class="answer-option" data-correct="false">أشارك بسرعة قبل ما الفرصة تضيع</button>
-            <button class="answer-option" data-correct="true">أتأكد من المحتوى ومين هيشوفه</button>
-            <button class="answer-option" data-correct="false">أعتمد على إن غيري شاركه</button>
-          </div>
+          <h3 id="individualPrompt">فكّر في موقف رقمي، واكتب كيف ستتصرف بطريقة آمنة.</h3>
+          <textarea id="individualResponse" class="individual-response" rows="5" placeholder="اكتب قرارك وخطواتك هنا..."></textarea>
+          <button class="btn btn-primary" id="individualSubmitBtn" type="button">حفظ إجابتي</button>
           <div class="answer-feedback" id="individualFeedback" aria-live="polite"></div>
         </article>
         <div class="screen-actions split-actions"><button class="btn btn-quiet" data-back="closing">السابق</button><button class="btn btn-primary" id="finishBtn">إنهاء التجربة</button></div>
